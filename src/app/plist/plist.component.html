@@ -1,7 +1,3 @@
-<ul *ngFor="let product of products">
-    <li> {{product.id}}
-    <li> {{product.name}}
-    <li> {{product.price}}
-    <li> {{product.url}}
-    <li> {{product.description}}
-</ul>
+<div class="product-index" >
+<app-pitem class="product-container" *ngFor="let product of products" [item]="product"></app-pitem>
+</div>

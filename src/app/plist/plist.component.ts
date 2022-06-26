@@ -13,9 +13,8 @@ export class PlistComponent implements OnInit {
   constructor(private data: GdataService) { }
 
   ngOnInit(): void {
-    this.data.getdata().subscribe( x => {this.products = x;});
-    console.log(this.products);
+    this.data.getdata().subscribe(x => { this.products = x; });
   }
-  
+
 
 }

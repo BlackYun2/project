@@ -5,6 +5,11 @@ img {
 
 .form-margin {
     margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 64px;
+    margin-left: 10%;
+
 }
 
 .cart-item {
@@ -36,6 +41,9 @@ img {
 .cart-panel {
     margin-left: 50px;
     margin-right: 50px;
+    display: flex;
+    justify-content: center;
+    
 }
 
 .empty-cart-message {

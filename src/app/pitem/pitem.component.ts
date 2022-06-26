@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { product } from '../product';
+import { ItemBridgeService } from '../services/item-bridge.service';
+import { TocartService } from '../services/tocart.service';
 
 @Component({
   selector: 'app-pitem',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PitemComponent implements OnInit {
 
-  constructor() { }
+  @Input() item: product = new product;
+  constructor(private itembridge: ItemBridgeService, private cart: TocartService) { }
 
   ngOnInit(): void {
+  }
+  goextra(x: product): void {
+    this.itembridge.item = x;
+  }
+  onclick(x: string): void {
+    alert("Added " + x + " " + this.item.name + " to cart!");
+    this.cart.additem(this.item, Number(x));
   }
 
 }
