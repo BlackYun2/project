@@ -1,4 +1,4 @@
-#code dependency 
+# Code dependency 
 i added bootstrap and fontawesome
 
 # Project
