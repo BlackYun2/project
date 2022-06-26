@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 import { FormsModule } from '@angular/forms';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +24,7 @@ import { FormsModule } from '@angular/forms';
     ConfirmComponent,
     HeaderComponent,
     PitemextraComponent
+
   ],
   imports: [
     BrowserModule,

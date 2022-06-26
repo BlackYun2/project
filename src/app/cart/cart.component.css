@@ -2,6 +2,10 @@ img {
     width: 100px;
     border-radius: 10px;
 }
+button{
+    max-width: fit-content;
+    margin:auto;
+}
 
 .form-margin {
     margin-bottom: 12px;
