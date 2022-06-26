@@ -1,4 +1,20 @@
 # Project
+*components*
+threre are 6 components header to put in the 
+header of the website
+pitem is every invidual product data
+plist which is all my products in a list (a list of pitem)
+pitemextra which have some extra attriputes for my products
+cart every product the user adds go there and it has form validation for purchases
+and finlly a conform page that conforms that the purchase is successful
+
+*services*
+i have 3 services
+gdata gets the data from the json file (backend) to any components that needs it
+item-bridge i used this to transfer data from pitem to pitemextra cause they are the same components with just some extra values
+tocart which i used to transform products from their pages to the cart cause there are no parent/child relation between them
+
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.1.
 
