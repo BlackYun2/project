@@ -21,8 +21,11 @@ export class PitemextraComponent implements OnInit {
   }
 
   onclick(x: string): void {
-    alert("Added " + x + " " + this.item.name + " to cart!");
-    this.cart.additem(this.item,Number(x));
+    if (this.cart.additem(this.item, Number(x)))
+      alert("Added " + x + " " + this.item.name + " to cart!");
+    else
+      alert("Already added ("+ this.item.name + ") before");
+
   }
 
 }

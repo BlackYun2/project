@@ -1,3 +1,6 @@
+<div *ngIf="!notempty" class="empty-cart-message">
+    <h1>Your cart is Empty</h1>
+</div>
 <div class="cart-panel" *ngIf="notempty">
     <div>
         <div class="cart-container" *ngFor="let item of cartdata[0], let i = index">
@@ -8,27 +11,61 @@
                     <p>${{item.price}}</p>
                     <div>
                         <label for="quantity">Amount: </label>
-                        <input class="number-input" type="number" id="quantity" name="quantity" min="1" max="10"
+                        <input #t (change)="updateamount(item, t.value)" class="number-input" type="number"
+                            value="{{cartdata[1][i]}}" id="quantity" name="quantity" min="1" max="10"
                             placeholder="{{cartdata[1][i]}}">
                     </div>
+                    <button type="button" class="btn btn-danger" style="margin-top: 5%;" (click)="remove(item)"> Remove
+                    </button>
                 </div>
             </div>
         </div>
         <h2 class="empty-cart-message">Total: ${{total}}</h2>
     </div>
-    <form (ngSubmit)="onSubmit()" class="form-margin">
-        <label class="form-label">Full name</label>
-        <input class="form-control" name="name" type="text" [(ngModel)]="name" required minlength="3" placeholder="(minimum 3 characters)">
-
-        <label class="form-label">Address</label>
-        <input class="form-control" name="address" type="text" [(ngModel)]="address" required minlength="6" placeholder="(minimum 6 characters)">
-
-        <label class="form-label">Credit card number</label>
-        <input class="form-control" name="card" type="number" inputmode="numeric" [(ngModel)]="card" required [minLength]="16" maxlength="16" placeholder="(16-digit number)">
-
-        <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Submit</button>
+    <form #form="ngForm" (ngSubmit)="onSubmit()" class="form-margin">
+        <div>
+            <label class="form-label">Full name</label>
+            <input #iname="ngModel" class="form-control" name="name" type="text" [(ngModel)]="name" required
+                minlength="3" placeholder="(minimum 3 characters)">
+            <div style="font-size: x-small; color: red;" *ngIf="iname.invalid && iname.dirty">
+                <div *ngIf="iname.errors?.['required']">
+                    The name cant be empty
+                </div>
+                <div *ngIf="iname.errors?.['minlength']">
+                    name length should be more than 3
+                </div>
+            </div>
+        </div>
+        <div>
+            <label class="form-label">Address</label>
+            <input #iaddress="ngModel" class="form-control" name="address" type="text" [(ngModel)]="address" required
+                minlength="6" placeholder="(minimum 6 characters)">
+            <div style="font-size: x-small; color: red;" *ngIf="iaddress.invalid && iaddress.dirty">
+                <div *ngIf="iaddress.errors?.['required']">
+                    The address cant be empty
+                </div>
+                <div *ngIf="iaddress.errors?.['minlength']">
+                    address length should be more than 6
+                </div>
+            </div>
+        </div>
+        <div>
+            <label class="form-label">Credit card number</label>
+            <input #icard="ngModel" class="form-control" name="card" type="text" ngModel="" pattern="[0-9]+"
+                inputmode="numeric" [(ngModel)]="card" required minlength="16" maxlength="16"
+                placeholder="(16-digit number)">
+            <div style="font-size: x-small; color: red;" *ngIf="icard.invalid && icard.dirty">
+                <div *ngIf="icard.errors?.['required']">
+                    The card field cant be empty
+                </div>
+                <div *ngIf="icard.errors?.['minlength'] || icard.errors?.['maxlength']">
+                    card field length should be more exactly 16
+                </div>
+                <div *ngIf="icard.errors?.['pattern']">
+                    card must consist only of numbers
+                </div>
+            </div>
+        </div>
+        <button type="submit" [disabled]="form.invalid" class="btn btn-primary"
+            style="margin-top: 10px;">Submit</button>
     </form>
-
-
-</div>
-<div *ngIf="!notempty" class="empty-cart-message"><h1>Your cart is Empty</h1></div>
