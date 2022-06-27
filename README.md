@@ -1,4 +1,4 @@
-#about
+# about
 its a simple e-commerce website.
 
 # Code dependency
