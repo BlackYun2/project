@@ -3,12 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PitemComponent } from './pitem/pitem.component';
-import { PlistComponent } from './plist/plist.component';
-import { CartComponent } from './cart/cart.component';
-import { ConfirmComponent } from './confirm/confirm.component';
-import { HeaderComponent } from './header/header.component';
-import { PitemextraComponent } from './pitemextra/pitemextra.component';
+import { PitemComponent } from './components/pitem/pitem.component';
+import { PlistComponent } from './components/plist/plist.component';
+import { CartComponent } from './components/cart/cart.component';
+import { ConfirmComponent } from './components/confirm/confirm.component';
+import { HeaderComponent } from './components/header/header.component';
+import { PitemextraComponent } from './components/pitemextra/pitemextra.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'

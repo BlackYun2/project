@@ -1,8 +1,8 @@
-import { ItemBridgeService } from './../services/item-bridge.service';
-import { product } from './../product';
+import { ItemBridgeService } from '../../services/item-bridge.service';
+import { product } from '../../models/product';
 import { Component, OnInit } from '@angular/core';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
-import { TocartService } from '../services/tocart.service';
+import { TocartService } from '../../services/tocart.service';
 
 @Component({
   selector: 'app-pitemextra',

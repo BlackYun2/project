@@ -1,6 +1,6 @@
-import { product } from './../product';
+import { product } from '../../models/product';
 import { Component, OnInit } from '@angular/core';
-import { TocartService } from '../services/tocart.service';
+import { TocartService } from '../../services/tocart.service';
 import { Router } from '@angular/router';
 
 @Component({

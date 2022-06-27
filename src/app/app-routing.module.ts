@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { CartComponent } from './cart/cart.component';
-import { PlistComponent } from './plist/plist.component';
-import { PitemextraComponent } from './pitemextra/pitemextra.component';
-import { ConfirmComponent } from './confirm/confirm.component';
+import { CartComponent } from './components/cart/cart.component';
+import { PlistComponent } from './components/plist/plist.component';
+import { PitemextraComponent } from './components/pitemextra/pitemextra.component';
+import { ConfirmComponent } from './components/confirm/confirm.component';
 
 
 const routes: Routes = [

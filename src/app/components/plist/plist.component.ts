@@ -1,6 +1,6 @@
-import { GdataService } from './../services/gdata.service';
+import { GdataService } from '../../services/gdata.service';
 import { Component, OnInit } from '@angular/core';
-import { product } from '../product';
+import { product } from '../../models/product';
 
 @Component({
   selector: 'app-plist',

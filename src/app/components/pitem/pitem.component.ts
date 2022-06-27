@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { product } from '../product';
-import { ItemBridgeService } from '../services/item-bridge.service';
-import { TocartService } from '../services/tocart.service';
+import { product } from '../../models/product';
+import { ItemBridgeService } from '../../services/item-bridge.service';
+import { TocartService } from '../../services/tocart.service';
 
 @Component({
   selector: 'app-pitem',
