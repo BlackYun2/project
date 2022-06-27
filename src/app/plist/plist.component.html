@@ -1,3 +1,3 @@
 <div class="product-index" >
-<app-pitem class="product-container" *ngFor="let product of products" [item]="product"></app-pitem>
+<app-pitem class="product-container" *ngFor="let product of products" [item]="product" (dontCare)="removeproduct($event)"></app-pitem>
 </div>

@@ -11,7 +11,7 @@
                     <p>${{item.price}}</p>
                     <div>
                         <label for="quantity">Amount: </label>
-                        <input #t (change)="updateamount(item, t.value)" class="number-input" type="number"
+                        <input ngModel (ngModelChange)="updateamount(item, $event)" class="number-input" type="number"
                             value="{{cartdata[1][i]}}" id="quantity" name="quantity" min="1" max="10"
                             placeholder="{{cartdata[1][i]}}">
                     </div>
