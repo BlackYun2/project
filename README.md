@@ -1,21 +1,24 @@
+#about
+its a simple e-commerce website.
+
 # Code dependency 
 i added bootstrap and fontawesome
 
 # Project
-*components*
-threre are 6 components header to put in the 
-header of the website
-pitem is every invidual product data
-plist which is all my products in a list (a list of pitem)
-pitemextra which have some extra attriputes for my products
-cart every product the user adds go there and it has form validation for purchases
-and finlly a conform page that conforms that the purchase is successful
-
-*services*
-i have 3 services
-gdata gets the data from the json file (backend) to any components that needs it
-item-bridge i used this to transfer data from pitem to pitemextra cause they are the same components with just some extra values
-tocart which i used to transform products from their pages to the cart cause there are no parent/child relation between them
+*****components*****
+threre are 6 components <br>
+header to put in the header of the website<br>
+pitem is every invidual product data<br>
+plist which is all my products in a list (a list of pitem)<br>
+pitemextra which have some extra attriputes for my products<br>
+cart every product the user adds go there and it has form validation for purchases<br>
+and finlly a conform page that conforms that the purchase is successful<br>
+<br>
+*services*<br>
+i have 3 services<br>
+gdata gets the data from the json file (backend) to any components that needs it<br>
+item-bridge i used this to transfer data from pitem to pitemextra cause they are the same components with just some extra values<br>
+tocart which i used to transform products from their pages to the cart cause there are no parent/child relation between them<br>
 
 
 
