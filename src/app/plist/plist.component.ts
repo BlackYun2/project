@@ -15,6 +15,9 @@ export class PlistComponent implements OnInit {
   ngOnInit(): void {
     this.data.getdata().subscribe(x => { this.products = x; });
   }
+  removeproduct(x: product) {
+    this.products = this.products.filter(p => p.id !== x.id);
+  }
 
 
 }

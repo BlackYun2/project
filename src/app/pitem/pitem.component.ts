@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { product } from '../product';
 import { ItemBridgeService } from '../services/item-bridge.service';
 import { TocartService } from '../services/tocart.service';
@@ -10,6 +10,7 @@ import { TocartService } from '../services/tocart.service';
 })
 export class PitemComponent implements OnInit {
 
+  @Output() dontCare = new EventEmitter;
   @Input() item: product = new product;
   constructor(private itembridge: ItemBridgeService, private cart: TocartService) { }
 
@@ -22,8 +23,11 @@ export class PitemComponent implements OnInit {
     if (this.cart.additem(this.item, Number(x)))
       alert("Added " + x + " " + this.item.name + " to cart!");
     else
-      alert("Already added ("+ this.item.name + ") before");
+      alert("Already added (" + this.item.name + ") before");
 
+  }
+  dontCare_remove() {
+    this.dontCare.emit(this.item);
   }
 
 }
