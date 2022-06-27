@@ -1,18 +1,18 @@
 #about
 its a simple e-commerce website.
 
-# Code dependency 
-i added bootstrap and fontawesome
+# Code dependency
+i added bootstrap and font-awesome
 
 # Project
 *****components*****
-threre are 6 components <br>
+there are 6 components <br>
 header to put in the header of the website<br>
-pitem is every invidual product data<br>
+pitem is every individual product data<br>
 plist which is all my products in a list (a list of pitem)<br>
-pitemextra which have some extra attriputes for my products<br>
+pitemextra which have some extra attributes for my products<br>
 cart every product the user adds go there and it has form validation for purchases<br>
-and finlly a conform page that conforms that the purchase is successful<br>
+and finally a conform page that conforms that the purchase is successful<br>
 <br>
 *services*<br>
 i have 3 services<br>
