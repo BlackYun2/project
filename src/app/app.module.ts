@@ -13,6 +13,7 @@ import { PitemextraComponent } from './components/pitemextra/pitemextra.componen
 import { HttpClientModule } from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 import { FormsModule } from '@angular/forms';
+import { NoscrollDirective } from './directives/noscroll.directive';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { FormsModule } from '@angular/forms';
     CartComponent,
     ConfirmComponent,
     HeaderComponent,
-    PitemextraComponent
+    PitemextraComponent,
+    NoscrollDirective
 
   ],
   imports: [
